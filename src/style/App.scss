@@ -3,25 +3,29 @@
 }
 
 .App-header {
-  min-height: 2vh;
+  background-color: #c0c0c0;
+  min-height: 5vh;
+  font-size: 32px;
 }
 
 .App-background {
   background-color: #282c34;
-  min-height: 98vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  // font-size: calc(10px + 2vmin);
+  color: #fff;
 }
 
 .container {
   position: absolute;
-  left: 50px;
-  right: 30vw;
-  background-color: red;
+  height: 720px;
+  width: 70vw;
+  left: 30px;
+  background-color: #c0c0c0;
+  border-radius: 10px;
 }
 
 .array-bar {
@@ -30,10 +34,37 @@
   background: blue;
   margin: 0 1px;
 }
+.generate-button {
+  position: absolute;
+  border-radius: 3px;
+  background-color: #c0c0c0;
+  padding: 16px;
+  left: 600px;
+  bottom: 50px;
+  color: #000000;
+}
 
 .drop-down-container {
   position: absolute;
-  right: 50px;
+  right: 30px;
   width: 25vw;
   height: 800px;
+}
+
+.tab-content {
+  max-height: 0;
+  -webkit-transition: max-height 0.35s;
+  -o-transition: max-height 0.35s;
+  transition: max-height 0.35s;
+}
+/* :checked - resize to full height */
+.tab input:checked ~ .tab-content {
+  max-height: 100vh;
+  background-color: #c0c0c0;
+}
+/* Label formatting when open */
+.tab input:checked + label {
+  /*@apply text-xl p-5 border-l-2 border-indigo-500 bg-gray-100 text-indigo*/
+  // font-size: 1.25rem; /*.text-xl*/
+  padding: 1.25rem; /*.p-5*/
 }

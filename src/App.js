@@ -1,7 +1,7 @@
 import DropDownMenu from "./components/DropDownMenu";
 import Visualiser from "./components/Visualiser";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
       <header className="App-header">Visualiser</header>
@@ -12,5 +12,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
